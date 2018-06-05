@@ -1,3 +1,46 @@
+
 body{
-    
-}
+    background-color: wheat;
+    text-align: center;
+    font-family: 'Exo 2', sans-serif;
+  }
+  .info{
+    padding:2%;
+  }
+  .form{
+    padding-top:1%;
+    background-color:whitesmoke;
+    margin-left:10%;
+    margin-right:10%;
+    border-radius:5px;
+  }
+  span{
+    padding:3%;
+  }
+  .left-tab{
+    text-align:center;
+    font-size:95%;
+  }
+  .right-tab{
+    font-size:90%;
+    vertical-align: left;
+  }
+  .input-field{
+    width:48%;
+    padding:0.5%;
+  }
+  .row{
+    padding:1%;
+  }
+  #submit {
+    background-color: orange;
+    border-radius: 4px;
+    color: white;
+    font-size: 1em;
+    height: 40px;
+    width: 96px;
+    margin: 10px;
+    border: 0px solid;
+  }
+  
+  
