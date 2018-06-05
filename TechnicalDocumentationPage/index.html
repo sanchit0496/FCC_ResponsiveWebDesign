@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
+</head>
+<body>
+    <div class='intro'>
+        <h1>Documentation For PHP 4</h1>
+          </div>
+        
+        <div class="scr">
+        <div class="container-fluid">
+          <div class="row">    
+        
+            <div class="col-sm-3 navbar" style="background-color:whitesmoke;">
+             <li class="nav-item">
+            <a class="nav-link active" href="#intro">Introduction</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#manual">PHP 4 Manual</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#migrating">Migrating to supported PHP version</a>
+          </li>
+           <li class="nav-item">
+            <a class="nav-link" href="#database">Database</a>
+          </li>
+           <li class="nav-item">
+            <a class="nav-link" href="#configg">Migrating Configuration Files
+        </a>
+          </li>
+           <li class="nav-item">
+            <a class="nav-link" href="#chng">What has changed in PHP 5.0.x
+        </a>
+          </li>
+        </ul>
+            </div>
+            
+            
+            <div class="col-sm-9 docume">
+             
+              <div id='intro'>
+                <h3><u>Introduction</u></h3><br>
+                <p>The PHP 4 documentation was removed from the PHP Manual in August 2014, approximately six years after PHP 4 reached its end of life.<br> However, we have provided downloadable copies of the manual for anyone who would need it.</p><br>
+              </div>
+        
+                    <div id='manual'>
+            <h3><u>PHP 4 Manual</u></h3><br>  
+                <p>An attempt has been made to preserve as much documentation related to PHP 4, as possible. Despite this, we don't have a nice, separate manual covering only PHP 4. The reason for this is how our documentation is structured. Even so, the archived copy describes more aspects of PHP 4 than actual manual described in August 2014 (e.g. it covers more PHP 4 extensions).
+        <br><br>
+        To download a copy of the manual for PHP 4, see the documentation archives. Please, remember, that archived version should not be used in everyday development, unless you are developing PHP 4 applications. This version lacks many topics connected with newer PHP versions and it is not updated anymore.</p><br>
+              </div>
+              
+                    <div id='migrating'>
+            <h3><u> Migrating to supported PHP version</u></h3><br>  
+             
+                <p>All users are strongly encouraged to upgrade their environments to newest PHP version. Please, read our guides for Migrating from PHP 4 to PHP 5.0.x for more information.</p><br>
+              </div>
+              
+                    <div id='database'>
+            <h3><u>Databases
+        </u></h3><br>  
+                <p>There were some changes in PHP 5 regarding databases (MySQL and SQLite).<br>
+        
+        In PHP 5 the MySQL client libraries are not bundled, because of license and maintenance problems. MySQL is supported with the only change being that MySQL support is no longer enabled by default in PHP 5. This essentially means that PHP doesn't include the --with-mysql option in the configure line so that you must now manually do this when compiling PHP. Windows users will need to edit php.ini and enable the php_mysql.dll DLL as in PHP 4 no such DLL existed, it was simply built into your Windows PHP binaries.<br>
+        
+        There is also a new extension, MySQLi (Improved MySQL), which is designed to work with MySQL 4.1 and above.<br><br>
+        
+        Since PHP 5, the SQLite extension is built-in PHP. SQLite is an embeddable SQL database engine and is not a client library used to connect to a big database server (like MySQL or PostgreSQL). The SQLite library reads and writes directly to and from the database files on disk.</p>
+              </div><br>
+              
+              <div id='configg'>
+            <h3><u>Migrating Configuration Files
+        </u></h3><br>
+                
+                <p>Since the ISAPI modules changed their names, from php4xxx to php5xxx, you need to make some changes in the configuration files. There were also changes in the CLI and CGI filenames. Please refer to the corresponding section for more information.<br><br>
+        Migrating the Apache configuration is extremely easy. See the example below to check the change you need to do:</p><br>
+              
+                <strong>Example #1 Migrating Apache configuration files for PHP 5</strong><br><br>
+                <div class='codes'>
+                # change this line:    <br>
+        LoadModule php4_module /php/sapi/php4apache2.dll<br><br>
+        
+        # with this one:<br>
+        LoadModule php5_module /php/php5apache2.dll
+                </div><br>
+        
+                <p>If your web server is running PHP in CGI mode, you should note that the CGI version has changed its name from php.exe to php-cgi.exe. In Apache, you should do something like this:<p><br>
+        
+                
+        <strong>Example #2 Migrating Apache configuration files for PHP 5, CGI mode
+        </strong><br>
+                <div class='codes'>
+                # change this line:    <br>
+        Action application/x-httpd-php "/php/php.exe" 
+        <br><br>
+        
+        # with this one:<br>
+        Action application/x-httpd-php "/php/php-cgi.exe"
+                </div><br><br>
+            
+                
+                
+                
+                
+                 <div id='chng'>
+            <h3><u>What has changed in PHP 5.0.x
+        </u></h3><br>
+                   <p>PHP 5 and the integrated Zend Engine 2 have greatly improved PHP's performance and capabilities, but great care has been taken to break as little existing code as possible. So migrating your code from PHP 4 to 5 should be very easy. Most existing PHP 4 code should be ready to run without changes, but you should still know about the few differences and take care to test your code before switching versions in production environments.
+        </p>
+                </div>
+              
+              
+              </div>
+          </div>
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              </div>
+              
+              
+              
+              
+              
+            </div>
+          </div>
+        </div> 
+</body>
+</html>
